@@ -37,7 +37,7 @@ Find us at:
 
 [Snapdrop](https://github.com/RobinLinus/snapdrop) A local file sharing in your browser. Inspired by Apple's Airdrop.
 
-[![snapdrop](https://static.requarks.io/logo/wikijs-full.svg)](https://github.com/RobinLinus/snapdrop)
+[![snapdrop]()](https://github.com/RobinLinus/snapdrop)
 
 ## Supported Architectures
 
