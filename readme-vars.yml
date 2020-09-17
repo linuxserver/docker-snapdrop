@@ -3,7 +3,7 @@
 # project information
 project_name: snapdrop
 project_url: "https://github.com/RobinLinus/snapdrop"
-project_logo: ""
+project_logo: "https://raw.githubusercontent.com/RobinLinus/snapdrop/master/client/images/logo_transparent_512x512.png"
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) A local file sharing in your browser. Inspired by Apple's Airdrop."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
 
@@ -29,6 +29,10 @@ param_usage_include_net: false
 param_usage_include_env: true
 param_env_vars:
   - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London." }
+
+param_usage_include_vols: true
+param_volumes:
+  - { vol_path: "/config", vol_host_path: "<path to config>", desc: "Persistent configs and logs." }
 
 param_usage_include_ports: true
 param_ports:

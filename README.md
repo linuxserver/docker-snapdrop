@@ -37,7 +37,7 @@ Find us at:
 
 [Snapdrop](https://github.com/RobinLinus/snapdrop) A local file sharing in your browser. Inspired by Apple's Airdrop.
 
-[![snapdrop]()](https://github.com/RobinLinus/snapdrop)
+[![snapdrop](https://raw.githubusercontent.com/RobinLinus/snapdrop/master/client/images/logo_transparent_512x512.png)](https://github.com/RobinLinus/snapdrop)
 
 ## Supported Architectures
 
@@ -68,6 +68,7 @@ docker create \
   -e TZ=Europe/London \
   -p 80:80 \
   -p 443:443 \
+  -v <path to config>:/config \
   --restart unless-stopped \
   linuxserver/snapdrop
 ```
@@ -88,6 +89,8 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
+    volumes:
+      - <path to config>:/config
     ports:
       - 80:80
       - 443:443
@@ -105,6 +108,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London. |
+| `-v /config` | Persistent configs and logs. |
 
 ## Environment variables from files (Docker secrets)
 
