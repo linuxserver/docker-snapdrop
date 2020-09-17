@@ -37,7 +37,7 @@ Find us at:
 
 [Snapdrop](https://github.com/RobinLinus/snapdrop) A local file sharing in your browser. Inspired by Apple's Airdrop.
 
-[![snapdrop]()](https://github.com/RobinLinus/snapdrop)
+[![snapdrop](https://raw.githubusercontent.com/RobinLinus/snapdrop/master/client/images/logo_transparent_512x512.png)](https://github.com/RobinLinus/snapdrop)
 
 ## Supported Architectures
 
