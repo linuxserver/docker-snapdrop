@@ -1,13 +1,13 @@
 alpine-baselayout-3.2.0-r7
 alpine-keys-2.2-r0
 apache2-utils-2.4.46-r1
-apk-tools-2.10.5-r1
+apk-tools-2.10.5-r3
 apr-1.7.0-r0
 apr-util-1.6.1-r6
 argon2-libs-20190702-r1
 bash-5.0.17-r0
 brotli-libs-1.0.9-r1
-busybox-1.31.1-r19
+busybox-1.31.1-r20
 c-ares-1.16.1-r0
 ca-certificates-20191127-r4
 ca-certificates-bundle-20191127-r4
@@ -40,8 +40,8 @@ ncurses-libs-6.2_p20200523-r0
 ncurses-terminfo-base-6.2_p20200523-r0
 nghttp2-libs-1.41.0-r0
 nginx-1.18.0-r1
-nodejs-12.21.0-r0
-npm-12.21.0-r0
+nodejs-12.22.1-r0
+npm-12.22.1-r0
 openssl-1.1.1k-r0
 pcre-8.44-r0
 pcre2-10.35-r0
@@ -61,7 +61,7 @@ procps-3.3.16-r0
 readline-8.0.4-r0
 scanelf-1.2.6-r0
 shadow-4.8.1-r0
-ssl_client-1.31.1-r19
+ssl_client-1.31.1-r20
 tzdata-2021a-r0
 xz-5.2.5-r0
 xz-libs-5.2.5-r0
