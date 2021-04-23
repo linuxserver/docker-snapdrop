@@ -40,6 +40,7 @@ Find us at:
 [![LSIO CI](https://img.shields.io/badge/dynamic/yaml?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=CI&query=CI&url=https%3A%2F%2Fci-tests.linuxserver.io%2Flinuxserver%2Fsnapdrop%2Flatest%2Fci-status.yml)](https://ci-tests.linuxserver.io/linuxserver/snapdrop/latest/index.html)
 
 [Snapdrop](https://github.com/RobinLinus/snapdrop) A local file sharing in your browser. Inspired by Apple's Airdrop.
+
 [![snapdrop](https://raw.githubusercontent.com/RobinLinus/snapdrop/master/client/images/logo_transparent_512x512.png)](https://github.com/RobinLinus/snapdrop)
 
 ## Supported Architectures
