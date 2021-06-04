@@ -39,7 +39,7 @@ nano-4.9.3-r0
 ncurses-libs-6.2_p20200523-r0
 ncurses-terminfo-base-6.2_p20200523-r0
 nghttp2-libs-1.41.0-r0
-nginx-1.18.0-r2
+nginx-1.18.0-r3
 nodejs-12.22.1-r0
 npm-12.22.1-r0
 openssl-1.1.1k-r0
