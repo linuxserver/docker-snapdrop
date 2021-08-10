@@ -59,9 +59,13 @@ optional_block_1: false
 optional_block_1_items: ""
 
 # application setup block
-app_setup_block_enabled: false
-app_setup_block: ""
+app_setup_block_enabled: true
+app_setup_block: |
+  Webui is accessible at http://SERVERIP:PORT
+
+  If you intend to expose Snapdrop to the internet, edit /config/nginx/site-confs/default and uncomment the real_ip settings
 
 # changelog
 changelogs:
+  - { date: "09.08.21:", desc: "Rebase to Alpine 3.14. Add real_ip block to nginx default site config." }
   - { date: "15.09.20:", desc: "Initial Release." }
