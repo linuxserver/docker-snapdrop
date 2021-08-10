@@ -56,6 +56,12 @@ The architectures supported by this image are:
 | arm64 | arm64v8-latest |
 | armhf | arm32v7-latest |
 
+## Application Setup
+
+Webui is accessible at http://SERVERIP:PORT
+
+If you intend to expose Snapdrop to the internet, edit /config/nginx/site-confs/default and uncomment the real_ip settings
+
 ## Usage
 
 Here are some example snippets to help you get started creating a container.
@@ -218,4 +224,5 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **09.08.21:** - Rebase to Alpine 3.14. Add real_ip block to nginx default site config.
 * **15.09.20:** - Initial Release.
