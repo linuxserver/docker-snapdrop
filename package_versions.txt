@@ -30,7 +30,7 @@ libretls-3.3.3p1-r3
 libssl1.1-1.1.1n-r0
 libstdc++-10.3.1_git20210424-r2
 libuuid-2.37.4-r0
-libxml2-2.9.13-r0
+libxml2-2.9.14-r0
 linux-pam-1.5.1-r1
 logrotate-3.18.1-r1
 musl-1.2.2-r3
@@ -43,7 +43,7 @@ nginx-1.20.2-r1
 nodejs-14.19.0-r0
 npm-7.17.0-r0
 oniguruma-6.9.7.1-r0
-openssl-1.1.1n-r0
+openssl-1.1.1o-r0
 pcre-8.44-r0
 pcre2-10.36-r0
 php7-7.4.26-r0
@@ -69,4 +69,4 @@ tzdata-2022a-r0
 utmps-0.1.0.2-r0
 xz-5.2.5-r1
 xz-libs-5.2.5-r1
-zlib-1.2.12-r0
+zlib-1.2.12-r1
