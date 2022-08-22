@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bash
 
-cd /app/snapdrop/server || exit
+cd /app/www/server || exit 1
 
 exec \
-	s6-setuidgid abc /usr/bin/node index.js
+    s6-setuidgid abc /usr/bin/node index.js
