@@ -63,8 +63,6 @@ app_setup_block_enabled: true
 app_setup_block: |
   Webui is accessible at http://SERVERIP:PORT
 
-  If you intend to expose Snapdrop to the internet, edit /config/nginx/site-confs/default.conf and uncomment the real_ip settings
-
 # changelog
 changelogs:
   - { date: "20.01.23:", desc: "Rebase to alpine 3.17 with php8.1." }
