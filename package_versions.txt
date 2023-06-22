@@ -209,9 +209,9 @@ negotiator                          0.6.3                   npm
 netcat-openbsd                      1.219-r1                apk     
 nghttp2-libs                        1.53.0-r0               apk     
 nginx                               1.24.0-r6               apk     
-node                                18.16.0                 binary  
+node                                18.16.1                 binary  
 node-gyp                            9.3.1                   npm     
-nodejs                              18.16.0-r1              apk     
+nodejs                              18.16.1-r0              apk     
 nopt                                6.0.0                   npm     
 nopt                                7.1.0                   npm     
 normalize-package-data              5.0.0                   npm     
