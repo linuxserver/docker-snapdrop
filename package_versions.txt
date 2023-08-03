@@ -84,7 +84,7 @@ console-control-strings             1.1.0                   npm
 coreutils                           9.3-r1                  apk     
 cross-spawn                         7.0.3                   npm     
 cssesc                              3.0.0                   npm     
-curl                                8.1.2-r0                apk     
+curl                                8.2.0-r1                apk     
 debug                               4.3.4                   npm     
 defaults                            1.0.4                   npm     
 delegates                           1.0.0                   npm     
@@ -151,7 +151,7 @@ libbsd                              0.11.7-r1               apk
 libbz2                              1.0.8-r5                apk     
 libc-utils                          0.7.2-r5                apk     
 libcrypto3                          3.1.1-r3                apk     
-libcurl                             8.1.2-r0                apk     
+libcurl                             8.2.0-r1                apk     
 libedit                             20221030.3.1-r1         apk     
 libexpat                            2.5.0-r1                apk     
 libgcc                              12.2.1_git20220924-r10  apk     
@@ -207,7 +207,7 @@ nano                                7.2-r1                  apk
 ncurses-terminfo-base               6.4_p20230506-r0        apk     
 negotiator                          0.6.3                   npm     
 netcat-openbsd                      1.219-r1                apk     
-nghttp2-libs                        1.53.0-r0               apk     
+nghttp2-libs                        1.55.1-r0               apk     
 nginx                               1.24.0-r6               apk     
 node                                18.17.0                 binary  
 node-gyp                            9.3.1                   npm     
