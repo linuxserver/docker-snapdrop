@@ -207,8 +207,8 @@ ncurses-terminfo-base               6.4_p20230506-r0        apk
 negotiator                          0.6.3                   npm     
 netcat-openbsd                      1.219-r1                apk     
 nghttp2-libs                        1.55.1-r0               apk     
+nginx                               1.24.0                  binary  
 nginx                               1.24.0-r6               apk     
-node                                18.17.0                 binary  
 node-gyp                            9.3.1                   npm     
 nodejs                              18.17.0-r0              apk     
 nopt                                6.0.0                   npm     
