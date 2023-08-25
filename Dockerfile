@@ -34,6 +34,9 @@ RUN \
   npm i && \
   echo "**** cleanup ****" && \
   rm -rf \
+    /etc/logrotate.d/php-fpm \
+    /etc/s6-overlay/s6-rc.d/svc-php-fpm \
+    /etc/s6-overlay/s6-rc.d/user/contents.d/svc-php-fpm \
     /tmp/* \
     $HOME/.cache
 
