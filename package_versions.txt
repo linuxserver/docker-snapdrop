@@ -33,7 +33,7 @@ aggregate-error                     3.1.0                   npm
 alpine-baselayout                   3.4.3-r1                apk   
 alpine-baselayout-data              3.4.3-r1                apk   
 alpine-keys                         2.4-r1                  apk   
-alpine-release                      3.18.4-r0               apk   
+alpine-release                      3.18.5-r0               apk   
 ansi-regex                          5.0.1                   npm   
 ansi-regex                          6.0.1                   npm   
 ansi-styles                         4.3.0                   npm   
@@ -83,7 +83,7 @@ console-control-strings             1.1.0                   npm
 coreutils                           9.3-r1                  apk   
 cross-spawn                         7.0.3                   npm   
 cssesc                              3.0.0                   npm   
-curl                                8.4.0-r0                apk   
+curl                                8.5.0-r0                apk   
 debug                               4.3.4                   npm   
 defaults                            1.0.4                   npm   
 delegates                           1.0.0                   npm   
@@ -138,7 +138,7 @@ is-fullwidth-code-point             3.0.0                   npm
 is-lambda                           1.0.1                   npm   
 isexe                               2.0.0                   npm   
 jackspeak                           2.2.0                   npm   
-jq                                  1.6-r3                  apk   
+jq                                  1.6-r4                  apk   
 json-parse-even-better-errors       3.0.0                   npm   
 json-stringify-nice                 1.1.4                   npm   
 jsonparse                           1.3.1                   npm   
@@ -150,7 +150,7 @@ libbsd                              0.11.7-r1               apk
 libbz2                              1.0.8-r5                apk   
 libc-utils                          0.7.2-r5                apk   
 libcrypto3                          3.1.4-r1                apk   
-libcurl                             8.4.0-r0                apk   
+libcurl                             8.5.0-r0                apk   
 libedit                             20221030.3.1-r1         apk   
 libexpat                            2.5.0-r1                apk   
 libgcc                              12.2.1_git20220924-r10  apk   
