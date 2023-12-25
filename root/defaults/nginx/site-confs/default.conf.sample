@@ -1,4 +1,4 @@
-## Version 2023/08/25 - Changelog: https://github.com/linuxserver/docker-snapdrop/commits/master/root/defaults/nginx/site-confs/default.conf.sample
+## Version 2023/12/25 - Changelog: https://github.com/linuxserver/docker-snapdrop/commits/master/root/defaults/nginx/site-confs/default.conf.sample
 
 server {
     listen 80 default_server;
@@ -12,14 +12,14 @@ server {
     include /config/nginx/ssl.conf;
 
     root /app/www/client;
-    index index.html index.htm index.php;
+    index index.html;
 
     location / {
         # enable for basic auth
         #auth_basic "Restricted";
         #auth_basic_user_file /config/nginx/.htpasswd;
 
-        try_files $uri $uri/ /index.html /index.php$is_args$args =404;
+        try_files $uri $uri/ /index.html;
     }
 
     location /server {
