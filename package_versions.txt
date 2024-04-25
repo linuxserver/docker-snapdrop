@@ -38,7 +38,7 @@ ansi-regex                          6.0.1                  npm
 ansi-styles                         4.3.0                  npm     (+1 duplicate)   
 ansi-styles                         6.2.1                  npm                      
 apache2-utils                       2.4.59-r0              apk                      
-apk-tools                           2.14.3-r1              apk                      
+apk-tools                           2.14.4-r0              apk                      
 apr                                 1.7.4-r0               apk                      
 apr-util                            1.6.3-r1               apk                      
 aproba                              2.0.0                  npm                      
@@ -97,6 +97,7 @@ event-target-shim                   5.0.1                  npm
 events                              3.3.0                  npm                      
 exponential-backoff                 3.1.1                  npm                      
 fastest-levenshtein                 1.0.16                 npm                      
+findutils                           4.9.0-r5               apk                      
 foreground-child                    3.1.1                  npm                      
 fs-minipass                         2.1.0                  npm                      
 fs-minipass                         3.0.3                  npm                      
