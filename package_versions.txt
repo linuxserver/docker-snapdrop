@@ -104,7 +104,7 @@ fs-minipass                         2.1.0                  npm
 fs-minipass                         3.0.3                  npm                      
 function-bind                       1.1.2                  npm                      
 gauge                               5.0.1                  npm                      
-git                                 2.43.0-r0              apk                      
+git                                 2.43.4-r0              apk                      
 glob                                10.3.10                npm                      
 graceful-fs                         4.2.11                 npm                      
 has-unicode                         2.0.1                  npm                      
