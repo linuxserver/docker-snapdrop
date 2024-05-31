@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-alpine-nginx:3.19
+FROM ghcr.io/linuxserver/baseimage-alpine-nginx:3.20
 
 # set version label
 ARG BUILD_DATE
@@ -32,6 +32,7 @@ RUN \
     /app/www/ --strip-components=1 && \
   cd /app/www/server && \
   npm i && \
+  printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   echo "**** cleanup ****" && \
   rm -rf \
     /etc/logrotate.d/php-fpm \
@@ -45,4 +46,5 @@ COPY root/ /
 
 # ports and volumes
 EXPOSE 80 443
+
 VOLUME /config
