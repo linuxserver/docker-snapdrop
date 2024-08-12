@@ -2,8 +2,8 @@
 
 # project information
 project_name: snapdrop
-project_url: "https://github.com/RobinLinus/snapdrop"
-project_logo: "https://raw.githubusercontent.com/RobinLinus/snapdrop/master/client/images/logo_transparent_512x512.png"
+project_url: "https://github.com/snapdrop/snapdrop"
+project_logo: "https://raw.githubusercontent.com/snapdrop/snapdrop/master/client/images/logo_transparent_512x512.png"
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) A local file sharing in your browser. Inspired by Apple's Airdrop."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
 

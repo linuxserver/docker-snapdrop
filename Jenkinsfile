@@ -18,7 +18,7 @@ pipeline {
     GITLAB_NAMESPACE=credentials('gitlab-namespace-id')
     DOCKERHUB_TOKEN=credentials('docker-hub-ci-pat')
     EXT_GIT_BRANCH = 'master'
-    EXT_USER = 'RobinLinus'
+    EXT_USER = 'snapdrop'
     EXT_REPO = 'snapdrop'
     BUILD_VERSION_ARG = 'SNAPDROP_VERSION'
     LS_USER = 'linuxserver'
@@ -533,7 +533,7 @@ pipeline {
           --label \"org.opencontainers.image.licenses=GPL-3.0-only\" \
           --label \"org.opencontainers.image.ref.name=${COMMIT_SHA}\" \
           --label \"org.opencontainers.image.title=Snapdrop\" \
-          --label \"org.opencontainers.image.description=[Snapdrop](https://github.com/RobinLinus/snapdrop) A local file sharing in your browser. Inspired by Apple's Airdrop.\" \
+          --label \"org.opencontainers.image.description=[Snapdrop](https://github.com/snapdrop/snapdrop) A local file sharing in your browser. Inspired by Apple's Airdrop.\" \
           --no-cache --pull -t ${IMAGE}:${META_TAG} --platform=linux/amd64 \
           --provenance=false --sbom=false \
           --build-arg ${BUILD_VERSION_ARG}=${EXT_RELEASE} --build-arg VERSION=\"${VERSION_TAG}\" --build-arg BUILD_DATE=${GITHUB_DATE} ."
@@ -565,7 +565,7 @@ pipeline {
               --label \"org.opencontainers.image.licenses=GPL-3.0-only\" \
               --label \"org.opencontainers.image.ref.name=${COMMIT_SHA}\" \
               --label \"org.opencontainers.image.title=Snapdrop\" \
-              --label \"org.opencontainers.image.description=[Snapdrop](https://github.com/RobinLinus/snapdrop) A local file sharing in your browser. Inspired by Apple's Airdrop.\" \
+              --label \"org.opencontainers.image.description=[Snapdrop](https://github.com/snapdrop/snapdrop) A local file sharing in your browser. Inspired by Apple's Airdrop.\" \
               --no-cache --pull -t ${IMAGE}:amd64-${META_TAG} --platform=linux/amd64 \
               --provenance=false --sbom=false \
               --build-arg ${BUILD_VERSION_ARG}=${EXT_RELEASE} --build-arg VERSION=\"${VERSION_TAG}\" --build-arg BUILD_DATE=${GITHUB_DATE} ."
@@ -594,7 +594,7 @@ pipeline {
               --label \"org.opencontainers.image.licenses=GPL-3.0-only\" \
               --label \"org.opencontainers.image.ref.name=${COMMIT_SHA}\" \
               --label \"org.opencontainers.image.title=Snapdrop\" \
-              --label \"org.opencontainers.image.description=[Snapdrop](https://github.com/RobinLinus/snapdrop) A local file sharing in your browser. Inspired by Apple's Airdrop.\" \
+              --label \"org.opencontainers.image.description=[Snapdrop](https://github.com/snapdrop/snapdrop) A local file sharing in your browser. Inspired by Apple's Airdrop.\" \
               --no-cache --pull -f Dockerfile.aarch64 -t ${IMAGE}:arm64v8-${META_TAG} --platform=linux/arm64 \
               --provenance=false --sbom=false \
               --build-arg ${BUILD_VERSION_ARG}=${EXT_RELEASE} --build-arg VERSION=\"${VERSION_TAG}\" --build-arg BUILD_DATE=${GITHUB_DATE} ."
