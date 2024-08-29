@@ -67,7 +67,7 @@ cmd-shim                            6.0.3                  npm
 color-convert                       2.0.1                  npm                      
 color-name                          1.1.4                  npm                      
 common-ancestor-path                1.0.1                  npm                      
-composer                            2.7.7                  binary                   
+composer                            2.7.8                  binary                   
 coreutils                           9.5-r1                 apk                      
 coreutils-env                       9.5-r1                 apk                      
 coreutils-fmt                       9.5-r1                 apk                      
