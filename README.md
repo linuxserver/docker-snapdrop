@@ -61,6 +61,12 @@ The architectures supported by this image are:
 
 Webui is accessible at http://SERVERIP:PORT
 
+If only using locally, comment out the following line in /config/nginx/site-confs/default.conf for local discovery:
+
+```
+proxy_set_header X-Forwarded-for $remote_addr;
+```
+
 ## Usage
 
 To help you get started creating a container from this image you can either use docker-compose or the docker cli.
