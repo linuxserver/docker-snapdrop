@@ -32,7 +32,6 @@ app_setup_block: |
   ```
   proxy_set_header X-Forwarded-for $remote_addr;
   ```
-  
 # init diagram
 init_diagram: |
   "snapdrop:latest": {
