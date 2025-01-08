@@ -2,32 +2,26 @@
 
 # project information
 project_name: snapdrop
-project_url: "https://github.com/RobinLinus/snapdrop"
-project_logo: "https://raw.githubusercontent.com/RobinLinus/snapdrop/master/client/images/logo_transparent_512x512.png"
+project_url: "https://github.com/snapdrop/snapdrop"
+project_logo: "https://raw.githubusercontent.com/snapdrop/snapdrop/master/client/images/logo_transparent_512x512.png"
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) A local file sharing in your browser. Inspired by Apple's Airdrop."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
-
 project_blurb_optional_extras_enabled: false
 project_blurb_optional_extras: []
-
 # supported architectures
 available_architectures:
-  - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
-  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
-
+  - {arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
+  - {arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
 # container parameters
 common_param_env_vars_enabled: true
 param_container_name: "{{ project_name }}"
-
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Persistent config files" }
-
+  - {vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Persistent config files"}
 param_usage_include_ports: true
 param_ports:
-  - { external_port: "80", internal_port: "80", port_desc: "http gui" }
-  - { external_port: "443", internal_port: "443", port_desc: "https gui" }
-
+  - {external_port: "80", internal_port: "80", port_desc: "http gui"}
+  - {external_port: "443", internal_port: "443", port_desc: "https gui"}
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
@@ -39,14 +33,71 @@ app_setup_block: |
   proxy_set_header X-Forwarded-for $remote_addr;
   ```
   
+# init diagram
+init_diagram: |
+  "snapdrop:latest": {
+    docker-mods
+    base {
+      fix-attr +\nlegacy cont-init
+    }
+    docker-mods -> base
+    legacy-services
+    custom services
+    init-services -> legacy-services
+    init-services -> custom services
+    custom services -> legacy-services
+    legacy-services -> ci-service-check
+    init-migrations -> init-adduser
+    init-nginx-end -> init-config
+    init-os-end -> init-config
+    init-config -> init-config-end
+    init-snapdrop-config -> init-config-end
+    init-os-end -> init-crontab-config
+    init-mods-end -> init-custom-files
+    base -> init-envfile
+    init-os-end -> init-folders
+    init-php -> init-keygen
+    base -> init-migrations
+    base -> init-mods
+    init-config-end -> init-mods
+    init-version-checks -> init-mods
+    init-mods -> init-mods-end
+    init-mods-package-install -> init-mods-end
+    init-mods -> init-mods-package-install
+    init-samples -> init-nginx
+    init-permissions -> init-nginx-end
+    base -> init-os-end
+    init-adduser -> init-os-end
+    init-envfile -> init-os-end
+    init-migrations -> init-os-end
+    init-keygen -> init-permissions
+    init-nginx -> init-php
+    init-folders -> init-samples
+    init-custom-files -> init-services
+    init-mods-end -> init-services
+    init-nginx-end -> init-snapdrop-config
+    init-config-end -> init-version-checks
+    init-services -> svc-cron
+    svc-cron -> legacy-services
+    init-services -> svc-nginx
+    svc-nginx -> legacy-services
+    init-services -> svc-php-fpm
+    svc-php-fpm -> legacy-services
+    init-services -> svc-snapdrop
+    svc-snapdrop -> legacy-services
+  }
+  Base Images: {
+    "baseimage-alpine-nginx:3.20" <- "baseimage-alpine:3.20"
+  }
+  "snapdrop:latest" <- Base Images
 # changelog
 changelogs:
-  - { date: "31.05.24:", desc: "Rebase to Alpine 3.20. Existing users should update their nginx confs to avoid http2 deprecation warnings."}
-  - { date: "06.02.24:", desc: "Existing users should update: site-confs/default.conf - Cleanup default site conf." }
-  - { date: "23.12.23:", desc: "Rebase to Alpine 3.19 with php 8.3."}
-  - { date: "25.05.23:", desc: "Rebase to Alpine 3.18, deprecate armhf." }
-  - { date: "13.04.23:", desc: "Move ssl.conf include to default.conf." }
-  - { date: "20.01.23:", desc: "Rebase to alpine 3.17 with php8.1." }
-  - { date: "20.08.22:", desc: "Rebasing to alpine 3.15 with php8. Restructure nginx configs ([see changes announcement](https://info.linuxserver.io/issues/2022-08-20-nginx-base))." }
-  - { date: "09.08.21:", desc: "Rebase to Alpine 3.14. Add real_ip block to nginx default site config." }
-  - { date: "15.09.20:", desc: "Initial Release." }
+  - {date: "31.05.24:", desc: "Rebase to Alpine 3.20. Existing users should update their nginx confs to avoid http2 deprecation warnings."}
+  - {date: "06.02.24:", desc: "Existing users should update: site-confs/default.conf - Cleanup default site conf."}
+  - {date: "23.12.23:", desc: "Rebase to Alpine 3.19 with php 8.3."}
+  - {date: "25.05.23:", desc: "Rebase to Alpine 3.18, deprecate armhf."}
+  - {date: "13.04.23:", desc: "Move ssl.conf include to default.conf."}
+  - {date: "20.01.23:", desc: "Rebase to alpine 3.17 with php8.1."}
+  - {date: "20.08.22:", desc: "Rebasing to alpine 3.15 with php8. Restructure nginx configs ([see changes announcement](https://info.linuxserver.io/issues/2022-08-20-nginx-base))."}
+  - {date: "09.08.21:", desc: "Rebase to Alpine 3.14. Add real_ip block to nginx default site config."}
+  - {date: "15.09.20:", desc: "Initial Release."}
