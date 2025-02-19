@@ -9,6 +9,11 @@ project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_
 project_categories: "File Sharing"
 project_blurb_optional_extras_enabled: false
 project_blurb_optional_extras: []
+
+# deprecation information
+project_deprecation_status: true
+project_deprecation_message: "Consider switching to https://github.com/linuxserver/docker-pairdrop for similar functionality"
+
 # supported architectures
 available_architectures:
   - {arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
@@ -92,6 +97,7 @@ init_diagram: |
   "snapdrop:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "19.02.25:", desc: "Deprecate."}
   - {date: "31.05.24:", desc: "Rebase to Alpine 3.20. Existing users should update their nginx confs to avoid http2 deprecation warnings."}
   - {date: "06.02.24:", desc: "Existing users should update: site-confs/default.conf - Cleanup default site conf."}
   - {date: "23.12.23:", desc: "Rebase to Alpine 3.19 with php 8.3."}
