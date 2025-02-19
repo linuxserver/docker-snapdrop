@@ -12,7 +12,7 @@ project_blurb_optional_extras: []
 
 # deprecation information
 project_deprecation_status: true
-project_deprecation_message: "Considering switching to https://github.com/linuxserver/docker-pairdrop for similar functionality"
+project_deprecation_message: "Consider switching to https://github.com/linuxserver/docker-pairdrop for similar functionality"
 
 # supported architectures
 available_architectures:
